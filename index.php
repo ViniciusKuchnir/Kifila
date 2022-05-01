@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 <div class="row form">
-                    <form method="POST" action="cadastrar.php">
+                    <form method="POST" action="backend/cadastro.php">
                         <div class="row">
                             <div class="col-md-12">
                              <div class="mb-2 users">
