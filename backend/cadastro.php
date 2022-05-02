@@ -24,13 +24,13 @@
          mysqli_query($conn, "INSERT INTO tb_user (id_user, email, senha, nome) values('$id_user','$email','$password', '$name')"); //Adiciona ao banco de dados os dados do usuario  
          mysqli_query($conn, "INSERT INTO tb_user_pj (id_user, setor_atuacao, cnpj) values('$id_user','$service', '$cnpj')"); //Adiciona ao banco de dados os dados do usuario
      }else{
-         $lastName = handleName($name);
-         $cpf = $_POST['user-cpf'];
-         $gender = $_POST['gender'];
-         $id_user = intval(createIdPf($cpf));
-         mysqli_query($conn, "INSERT INTO tb_user (id_user, email, senha, nome) values('$id_user','$email','$password', '$name')");
-         mysqli_query($conn, "INSERT INTO tb_user_pf (id_user, sobrenome, cpf, sexo) values('$id_user','$lastName','$cpf', '$gender')"); //Adiciona ao banco de dados os dados do usuario
-        }
+        $lastName = handleName($name);
+        $cpf = $_POST['user-cpf'];
+        $gender = $_POST['gender'];
+        $id_user = intval(createIdPf($cpf));
+        mysqli_query($conn, "INSERT INTO tb_user (id_user, email, senha, nome) values('$id_user','$email','$password', '$name')");
+        mysqli_query($conn, "INSERT INTO tb_user_pf (id_user, sobrenome, cpf, sexo) values('$id_user','$lastName','$cpf', '$gender')"); //Adiciona ao banco de dados os dados do usuario
+    }
 
 function handleName($nameUser){
     $name = explode(" ", $nameUser);
