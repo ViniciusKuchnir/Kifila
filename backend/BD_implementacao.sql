@@ -41,3 +41,23 @@ create table fila(
 
 alter table fila add constraint criador
 foreign key (criador) references empresa(codEmpresa);
+
+create table ingresso(
+        codIngresso int primary key auto_increment,
+    tempoestimado time, 
+    tempotolerancia time, 
+    lugarfila int, 
+    idfila int, 
+    iduser int,
+    dataingresso date, 
+    horaingresso time, 
+    horasaida time
+);
+
+alter table ingresso add constraint idfila
+foreign key (idfila) references fila(idfila);
+
+alter table ingresso add constraint iduser
+foreign key (iduser) references usuario(codUser);
+
+
