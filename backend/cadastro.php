@@ -20,14 +20,16 @@
      if ($type_user == 'company') {
          $service = $_POST['service'];
          $cnpj = $_POST['user-cnpj'];
-         mysqli_query($conn, "INSERT INTO tb_user (email, senha, nome) values('$email','$password', '$name')"); //Adiciona ao banco de dados os dados do usuario  
-         mysqli_query($conn, "INSERT INTO tb_user_pj (setor_atuacao, cnpj) values('$service', '$cnpj')"); //Adiciona ao banco de dados os dados do usuario
+         $id_user = intval(createIdPj($cnpj));
+         mysqli_query($conn, "INSERT INTO tb_user (id_user, email, senha, nome) values('$id_user','$email','$password', '$name')"); //Adiciona ao banco de dados os dados do usuario  
+         mysqli_query($conn, "INSERT INTO tb_user_pj (id_user, setor_atuacao, cnpj) values('$id_user','$service', '$cnpj')"); //Adiciona ao banco de dados os dados do usuario
      }else{
          $lastName = handleName($name);
          $cpf = $_POST['user-cpf'];
          $gender = $_POST['gender'];
-         mysqli_query($conn, "INSERT INTO tb_user (email, senha, nome) values('$email','$password', '$name')");
-         mysqli_query($conn, "INSERT INTO tb_user_pf (sobrenome, cpf, sexo) values('$lastName','$cpf', '$gender')"); //Adiciona ao banco de dados os dados do usuario
+         $id_user = intval(createIdPf($cpf));
+         mysqli_query($conn, "INSERT INTO tb_user (id_user, email, senha, nome) values('$id_user','$email','$password', '$name')");
+         mysqli_query($conn, "INSERT INTO tb_user_pf (id_user, sobrenome, cpf, sexo) values('$id_user','$lastName','$cpf', '$gender')"); //Adiciona ao banco de dados os dados do usuario
         }
 
 function handleName($nameUser){
@@ -41,6 +43,37 @@ function handleName($nameUser){
     return $lastName;
 }
 
+//Cria um id para o usuário do tipo: Pessoa Física
+/*
+    Id = '11' + 6 dígitos ao centro do cpf
+    Exemplo Para o cpf 012.542.324-39:
+        11542324
+*/
+function createIdPf($cpf){ 
+    $cpf = RemoveSpecialChar($cpf);
+    $code_cpf = substr($cpf, 3, 6);
+    $id = '11'. $code_cpf;
+    return $id;
+}
+
+//Cria um id para o usuário do tipo: Pessoa Jurídica
+/*
+    Id = '22' + 6 dígitos ao centro do cpf
+    Exemplo Para o CNPJ 12.345.678/0000-1:
+        22345678
+*/
+function createIdPj($cnpj){ 
+    $cnpj = RemoveSpecialChar($cnpj);
+    $code_cnpj = substr($cnpj, 2, 6);
+    $id = '22'. $code_cnpj;
+    return $id;
+}
+
+//Remove caracteres especiais
+function RemoveSpecialChar($str){
+    $result = str_replace(array(".", "-", "/"), '', $str);
+    return $result;
+}
                          
 
     mysqli_close($conn);
