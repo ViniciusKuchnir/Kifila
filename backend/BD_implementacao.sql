@@ -26,4 +26,18 @@ foreign key (idsetor) references setor(idsetor);
 create table setor(
 	idsetor int primary key auto_increment,
     nomesetor varchar(55)
+);  
+
+create table fila(
+    idfila int primary key auto_increment, 
+    nome varchar(20),
+    descricao varchar(256),
+    numerointegrantes int, 
+    toleranciamedia time, 
+    tempomedioespero time,
+    datafila date,
+    criador int
 );
+
+alter table fila add constraint criador
+foreign key (criador) references empresa(codEmpresa);
