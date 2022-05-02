@@ -12,34 +12,36 @@
       die("Connection failed: " . mysqli_connect_error());
       }
 
-    $name = $_POST['user-name'];
     $email = $_POST['user-email'];
     $type_user = $_POST['type-user'];
     $password = createHashPassword($_POST['user-password']);
 
      if ($type_user == 'company') {
-         $service = $_POST['service'];
-         $cnpj = $_POST['user-cnpj'];
-         $id_user = intval(createIdPj($cnpj));
-         mysqli_query($conn, "INSERT INTO tb_user (id_user, email, senha, nome) values('$id_user','$email','$password', '$name')"); //Adiciona ao banco de dados os dados do usuario  
-         mysqli_query($conn, "INSERT INTO tb_user_pj (id_user, setor_atuacao, cnpj) values('$id_user','$service', '$cnpj')"); //Adiciona ao banco de dados os dados do usuario
+        $name = $_POST['user-name'];
+        $service = $_POST['service'];
+        $cnpj = $_POST['user-cnpj'];
+        $id_user = intval(createIdPj($cnpj));
+        mysqli_query($conn, "INSERT INTO tb_user (id_user, email, senha, nome) values('$id_user','$email','$password', '$name')"); //Adiciona ao banco de dados os dados do usuario  
+        mysqli_query($conn, "INSERT INTO tb_user_pj (id_user, setor_atuacao, cnpj) values('$id_user','$service', '$cnpj')"); //Adiciona ao banco de dados os dados do usuario
      }else{
-        $lastName = handleName($name);
+        $name = $_POST['user-name']; 
+        $firstName = handleName($name);
+        $lastName = handleLastName($name);
         $cpf = $_POST['user-cpf'];
         $gender = $_POST['gender'];
         $id_user = intval(createIdPf($cpf));
-        mysqli_query($conn, "INSERT INTO tb_user (id_user, email, senha, nome) values('$id_user','$email','$password', '$name')");
+        mysqli_query($conn, "INSERT INTO tb_user (id_user, email, senha, nome) values('$id_user','$email','$password', '$firstName')");
         mysqli_query($conn, "INSERT INTO tb_user_pf (id_user, sobrenome, cpf, sexo) values('$id_user','$lastName','$cpf', '$gender')"); //Adiciona ao banco de dados os dados do usuario
     }
 
 function handleName($nameUser){
+    $name = explode(" ", $nameUser)[0];
+    return $name;
+}
+
+function handleLastName($nameUser){
     $name = explode(" ", $nameUser);
-    $lastName = "";
-    array_shift($name);
-    for ($i=0; $i < count($name); $i++) { 
-        $lastName .= $name[$i];
-    }
-    
+    $lastName = $name[1];
     return $lastName;
 }
 
