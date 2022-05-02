@@ -15,7 +15,7 @@
     $name = $_POST['user-name'];
     $email = $_POST['user-email'];
     $type_user = $_POST['type-user'];
-    $password = $_POST['user-password'];
+    $password = createHashPassword($_POST['user-password']);
 
      if ($type_user == 'company') {
          $service = $_POST['service'];
@@ -73,6 +73,11 @@ function createIdPj($cnpj){
 function RemoveSpecialChar($str){
     $result = str_replace(array(".", "-", "/"), '', $str);
     return $result;
+}
+
+function createHashPassword($password){
+    $hash_password = md5($password);
+    return $hash_password;
 }
                          
 
