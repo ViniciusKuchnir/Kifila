@@ -21,6 +21,7 @@
         $id_user = intval(createIdPf($cpf));
         mysqli_query($conn, "INSERT INTO tb_user (id_user, email, senha, nome) values('$id_user','$email','$password', '$firstName')");
         mysqli_query($conn, "INSERT INTO tb_user_pf (id_user, sobrenome, cpf, sexo) values('$id_user','$lastName','$cpf', '$gender')"); //Adiciona ao banco de dados os dados do usuario
+        header("Location: http://localhost/Kifila/pages/dashboard_pf"); 
     }
 
 function handleName($nameUser){
