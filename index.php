@@ -124,7 +124,7 @@
                             <div class="col-md-12">
                                 <div class="mb-4">
                                     <label class="custom-control custom-checkbox">
-                                        <input type="checkbox" name="privacy-policy" id="checkbox-privacy-policy" value="checkedValue" class="custom-control-input">
+                                        <input type="checkbox" name="privacy-policy" id="checkbox-privacy-policy" value="checkedValue" class="custom-control-input" required />
                                         <span class="custom-control-indicator">Eu li e aceito os termos de <button type="button" id="privacy-policy" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><a href="#">política de privacidade</a></button></span>
                                       </label>
                                 </div>
