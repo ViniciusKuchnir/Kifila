@@ -15,18 +15,18 @@
                     </div>
                 </div>
                 <div class="row form ">
-                   <form action="">
+                   <form method="POST" action="../../backend/login.php" >
                        <div class="row">
                            <div class="col-md-12">
                                <div class="mb-4">
-                                 <label for="" class="form-label">Email</label>
+                                 <label for="email" class="form-label">Email</label>
                                  <input type="email" class="form-control" name="email-user" id="email" aria-describedby="helpId" placeholder="Digite o seu email" required>
                                </div>
                            </div>
                            <div class="col-md-12">
                                <div class="mb-4">
-                                 <label for="" class="form-label">Senha</label>
-                                 <input type="password" class="form-control" name="email-user" id="email" aria-describedby="helpId" placeholder="Digite a sua senha">
+                                 <label for="senha" class="form-label">Senha</label>
+                                 <input type="password" class="form-control" name="password-user" id="email" aria-describedby="helpId" placeholder="Digite a sua senha" required>
                                </div>
                            </div>
                            <div class="col-md-12 mb-3 forgot-password">
@@ -37,7 +37,7 @@
                            </div>
                            <div class="col-md-12 signup">
                                 <span class="text">Não possui uma conta?</span>
-                                <a href="">Se cadastre de graça</a>
+                                <a href="../../index.php">Se cadastre de graça</a>
                            </div>
                        </div>
                    </form>
