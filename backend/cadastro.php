@@ -22,7 +22,7 @@
         
         mysqli_query($conn, "INSERT INTO usuario (codUser, nome, sobrenome, email, cpf, sexo, senha) 
         values('$id_user','$firstName','$lastName','$email','$cpf','$gender','$password')");
-    
+        
     }
 
 function handleName($nameUser){
@@ -32,7 +32,11 @@ function handleName($nameUser){
 
 function handleLastName($nameUser){
     $name = explode(" ", $nameUser);
-    $lastName = $name[1];
+    $aux = 0;
+    for ($i=0; $i < count($name) ; $i++) { //Faz a contagem de quantos sobrenomes existem
+        $aux += 1;
+    }
+    $lastName = $name[$aux - 1]; // Recupera o ultimo sobrenome
     return $lastName;
 }
 
