@@ -1,0 +1,58 @@
+/* Google Font */
+    /*Oleo Script Swash Caps*/
+    @import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap');
+    /*Nunito*/
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+/*Default*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+#title{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 1rem;   
+}
+
+.icon{
+    text-align: center;
+    font-size: 8rem;
+}
+
+label{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.form-control:focus{
+    box-shadow: 2px 2px 2px 2px #4BC9C4;
+    outline: none;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+    width: 20rem;
+    height: 44px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 0.1rem;
+    background-color: #4BC9C4;
+    border-radius: 22px;
+    border: 2px solid #FFF;
+    transition: 0.5s;
+}
+
+.btn:hover{
+    color: #4BC9C4;
+    background-color: #FFF;
+    border: 2px solid #4BC9C4;
+}

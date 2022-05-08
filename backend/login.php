@@ -14,7 +14,7 @@
         window.location.href='../pages/signin/signin.php';</script>";
         die();
     }else{
-        setcookie("email",$email);
+        setcookie("email",$email, time() + (86400 * 30), "/");
         echo "<script>window.location.href='../pages/dashboard_pf';</script>";
         die();
     }

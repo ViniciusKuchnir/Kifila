@@ -9,6 +9,8 @@
     <!--CSS-->
     <link rel="stylesheet" href="css/style.css">
 
-    <!--Font Awesome-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Font Awesome -->
+    <script src="https://kit.fontawesome.com/95b08d3090.js" crossorigin="anonymous"></script>
+
+
 </head>
