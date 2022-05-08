@@ -10,9 +10,11 @@
         $service = $_POST['service'];
         $cnpj = $_POST['user-cnpj'];
         $id_user = intval(createIdPj($cnpj));
+        
         mysqli_query($conn, "INSERT INTO empresa (codEmpresa, nome, email, cnpj, idsetor , senha) 
         values('$id_user','$name','$email', '$cnpj', '$service', '$password')"); //Adiciona ao banco de dados os dados do usuario
-     }else{
+
+    }else{
         $name = $_POST['user-name']; 
         $firstName = handleName($name);
         $lastName = handleLastName($name);
@@ -24,6 +26,13 @@
         values('$id_user','$firstName','$lastName','$email','$cpf','$gender','$password')");
         
     }
+
+    echo"<script language='javascript' type='text/javascript'>
+            window.location.href='../pages/signin/signin.php';
+        </script>
+    ";
+        
+        die();
 
 function handleName($nameUser){
     $name = explode(" ", $nameUser)[0];
