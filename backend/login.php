@@ -1,6 +1,8 @@
 <?php
     require('conectionBD.php');
 
+    setcookie("email", "", time()-3600);
+
     $email = $_POST['email-user'];
     $password = createHashPassword($_POST['password-user']);
     

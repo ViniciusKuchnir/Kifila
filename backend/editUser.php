@@ -6,16 +6,37 @@
 
     if ($password === $confirmPassword) {
         if ($password != '' && $confirmPassword != '') {
-            $name = handleName($nameUser);
-            $lastName = handleLastName($nameUser);
-            $hash_password = createHashPassword($password);
-            $email = $_COOKIE['email'];
 
-            mysqli_query($conn, "UPDATE usuario 
-            SET nome = '$name', 
-            sobrenome = '$lastName',
-            senha = '$hash_password'
-            WHERE email = '$email' ");
+            $email = $_COOKIE['email']; 
+            $query_user = mysqli_query($conn, "SELECT * FROM usuario WHERE email = '$email'");
+            $total_users = mysqli_num_rows($query_user);  
+
+            $query_company = mysqli_query($conn, "SELECT * FROM empresa WHERE email = '$email'");
+            $total_company = mysqli_num_rows($query_company);
+
+            
+            if ($total_users == 1) {
+                $name = handleName($nameUser);
+                $lastName = handleLastName($nameUser);
+                $hash_password = createHashPassword($password);
+                $email = $_COOKIE['email'];
+    
+                mysqli_query($conn, "UPDATE usuario 
+                SET nome = '$name', 
+                sobrenome = '$lastName',
+                senha = '$hash_password'
+                WHERE email = '$email' ");
+
+            }
+            if($total_company == 1){
+                $hash_password = createHashPassword($password);
+                $email = $_COOKIE['email'];
+
+                mysqli_query($conn, "UPDATE empresa
+                SET nome = '$nameUser', 
+                senha = '$hash_password'
+                WHERE email = '$email' ");
+            }    
         }else{
             echo"<script language='javascript' type='text/javascript'>
             alert('As senhas não podem conter valores vazios');
