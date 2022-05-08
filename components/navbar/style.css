@@ -29,6 +29,10 @@
     color: #232323;
 }
 
+.navbar-menu{
+    width: 20%;
+}
+
 .menu{
     display: flex;
     justify-content: space-between;
