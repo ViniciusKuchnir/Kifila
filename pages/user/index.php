@@ -29,7 +29,7 @@
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="" class="form-label">Nome</label>
-                                <input type="text"class="form-control" name="name-user" id="user-name" aria-describedby="helpId" value="<?php echo getNameuser($_COOKIE['email']) ?>"placeholder="Digite o seu nome">
+                                <input type="text"class="form-control" name="name-user" id="user-name" minlength="3" min aria-describedby="helpId" value="<?php echo getNameuser($_COOKIE['email']) ?>" placeholder="Digite o seu nome" required>
                                 <small id="helpId" class="form-text text-muted">Help text</small>
                             </div>
                         </div>
@@ -45,14 +45,14 @@
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="" class="form-label">Senha</label>
-                                <input type="text"class="form-control" name="user-password" id="user-password" aria-describedby="helpId" placeholder="Digite a sua senha">
+                                <input type="password"class="form-control" name="user-password" id="user-password" minlength="8" maxlength="16" aria-describedby="helpId" placeholder="Digite a sua senha" required>
                                 <small id="helpId" class="form-text text-muted">Help text</small>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="" class="form-label">Confrimação de Senha</label>
-                                <input type="text"class="form-control" name="confirm-password" id="confirm-password" aria-describedby="helpId" placeholder="Digite novamente a sua senha">
+                                <input type="password"class="form-control" name="confirm-password" id="confirm-password" minlength="8" maxlength="16" aria-describedby="helpId" placeholder="Digite novamente a sua senha" required>
                                 <small id="helpId" class="form-text text-muted">Help text</small>
                             </div>
                         </div>
