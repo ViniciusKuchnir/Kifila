@@ -43,7 +43,7 @@ alter table fila add constraint criador
 foreign key (criador) references empresa(codEmpresa);
 
 create table ingresso(
-        codIngresso int primary key auto_increment,
+    codIngresso int primary key auto_increment,
     tempoestimado time, 
     tempotolerancia time, 
     lugarfila int, 
