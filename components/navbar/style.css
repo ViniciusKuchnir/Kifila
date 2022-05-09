@@ -12,10 +12,8 @@
     font-family: 'Nunito', sans-serif;
 }
 
-.navbar{
-    width: 100%;
+.head{
     height: 70px;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #4BC9C4;
@@ -29,22 +27,25 @@
     color: #232323;
 }
 
-.navbar-menu{
+.head-menu{
     width: 20%;
 }
 
-.menu{
+.menu-items{
+    height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     list-style: none;
 }
 
 .menu-item a{
     display: flex;
+    align-items: center;
     text-decoration: none;
     display: flex;
     align-items: center;
     font-size: 1.1rem;
     color: #232323;
+    margin-right: 2rem;
 }
