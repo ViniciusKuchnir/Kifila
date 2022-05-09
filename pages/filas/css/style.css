@@ -1,0 +1,70 @@
+#title{
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.card{
+    height: 100%;
+}
+
+.buttons-card{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttons-card a{
+    text-decoration: none;
+    margin-right: 1%;
+}
+
+.button-card{
+    height: 44px;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 22px;
+    border: 2px solid #fff;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+#edit-button{
+    background-color: #FEDC00;
+}
+
+#edit-button:hover{
+    background-color: #FFF;
+    border: 2px solid #FEDC00;
+    color: #FEDC00;
+}
+
+#delet-button{
+    background-color: #F32013;
+}
+
+#delet-button:hover{
+    background-color: #FFF;
+    border: 2px solid #F32013;
+    color: #F32013;
+}
+
+.button-create{
+    display: flex;
+    justify-content: center;
+}
+
+#btn{
+    height: 60px;
+    width: 60px;
+    background-color: #67dd39;
+    border: 2px solid #FFF;
+    border-radius: 30px;
+    font-size: 1.6rem;
+    transition: 0.5s;
+}
+
+#btn:hover{
+    background-color: #FFF;
+    border: 2px solid #67dd39;
+    color: #67dd39;
+}

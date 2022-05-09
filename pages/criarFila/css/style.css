@@ -1,0 +1,32 @@
+#title{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+label{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button{
+    width: 15%;
+    padding: 10px;
+    background-color: #4BC9C4;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 2px solid #FFF;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+.button:hover{
+    background-color: #FFF;
+    color: #4BC9C4;
+    border: 2px solid #4BC9C4;
+}
