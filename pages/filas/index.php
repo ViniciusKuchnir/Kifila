@@ -34,8 +34,8 @@
                                 <p class="card-text"><?php echo $filas[$i]['descricao'] ?></p>
                                 <div class="row">
                                     <div class="col-md-12 buttons-card">
-                                        <a href="#">
-                                            <button type="button" class="button-card" id="delet-button">Excluir Fila</button>    
+                                        <a href="../../backend/excluirFila.php?idfila=<?php echo $filas[$i]['idfila']?>">
+                                            <button type="button" class="button-card" id="delet-button" onclick="excluirFila(<?php echo $filas[$i]['idfila']?>)">Excluir Fila</button>    
                                         </a>
                                         
                                     </div>
