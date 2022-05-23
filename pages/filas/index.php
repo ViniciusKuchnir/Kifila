@@ -35,9 +35,6 @@
                                 <div class="row">
                                     <div class="col-md-12 buttons-card">
                                         <a href="#">
-                                            <button type="button" class="button-card" id="edit-button">Editar Fila</button>
-                                        </a>
-                                        <a href="#">
                                             <button type="button" class="button-card" id="delet-button">Excluir Fila</button>    
                                         </a>
                                         
