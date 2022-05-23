@@ -14,5 +14,7 @@
         VALUES ('$name', '$description', 0 , '$tolerance', '$date', '$id_user' )
     ");
 
+echo "<script>window.location.href='../pages/filas/index.php';</script>";
+
     mysqli_close($conn);
 ?>
