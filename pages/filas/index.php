@@ -31,7 +31,7 @@
                                 <h5 class="card-title mb-3">Código: <?php echo $filas[$i]['idfila']?></h5>
                                 <h5 class="card-title">Nome Fila: <?php echo $filas[$i]['nome']?></h5>
                                 <h6 class="card-subtitle mb-3 text-muted">Data de Criação: <?php echo $filas[$i]['datafila']?></h6>
-                                <p class="card-text"><?php echo $filas[$i]['descricao'] ?></p>
+                                <p class="card-text">Descrição: <?php echo $filas[$i]['descricao'] ?></p>
                                 <div class="row">
                                     <div class="col-md-12 buttons-card">
                                         <a href="../../backend/excluirFila.php?idfila=<?php echo $filas[$i]['idfila']?>">
