@@ -1,5 +1,5 @@
-create database Kifila;
-use Kifila;
+create database kifila;
+use kifila;
 
 create table usuario(
 	codUser INTEGER primary key auto_increment,

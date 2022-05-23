@@ -1,6 +1,6 @@
 <?php
     // Definições de host, database, usuário e senha
-    $host = "localhost:3307";
+    $host = "localhost:3306";
     $db   = "kifila";
     $user = "root";
     $pass = "root";
