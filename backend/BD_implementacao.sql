@@ -60,4 +60,4 @@ foreign key (idfila) references fila(idfila);
 alter table ingresso add constraint iduser
 foreign key (iduser) references usuario(codUser);
 
-
+ALTER TABLE ingresso ADD COLUMN atendido boolean AFTER horasaida;
