@@ -25,15 +25,10 @@
                             </li>
                             <li class="menu-item">
                                 <a href="../../pages/filas">
-                                    Criar
+                                    Filas
                                 </a>
                             </li>
                         <?php }?>
-                        <li class="menu-item">
-                            <a href="../../pages/pesquisarFilas">
-                                Filas
-                            </a>
-                        </li>
                         <li class="menu-item">
                             <a href="../../pages/user">
                                 Perfil
