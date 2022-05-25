@@ -25,7 +25,7 @@
                             </li>
                             <li class="menu-item">
                                 <a href="../../pages/filas">
-                                    Filas
+                                    Criar
                                 </a>
                             </li>
                         <?php }?>
