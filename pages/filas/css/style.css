@@ -48,6 +48,16 @@
     color: #F32013;
 }
 
+#follow-button{
+    background-color: #4BC9C4;
+}
+
+#follow-button:hover{
+    background-color: #FFF;
+    border: 2px solid #4BC9C4;
+    color: #4BC9C4;
+}
+
 .button-create{
     display: flex;
     justify-content: center;

@@ -1,0 +1,29 @@
+#table-head{
+    background-color: #4BC9C4;
+    color: #FFF;
+}
+
+.button{
+    display: flex;
+    text-align: center;
+}
+
+.button-call{
+    height: 44px;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 22px;
+    border: 2px solid #fff;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+#call-button{
+    background-color: #4BC9C4;
+}
+
+#call-button:hover{
+    background-color: #FFF;
+    border: 2px solid #4BC9C4;
+    color: #4BC9C4;
+}

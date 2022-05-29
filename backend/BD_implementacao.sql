@@ -52,6 +52,7 @@ create table ingresso(
     dataingresso date, 
     horaingresso time, 
     horasaida time
+    atendido boolean, 
 );
 
 alter table ingresso add constraint idfila
@@ -59,5 +60,3 @@ foreign key (idfila) references fila(idfila);
 
 alter table ingresso add constraint iduser
 foreign key (iduser) references usuario(codUser);
-
-ALTER TABLE ingresso ADD COLUMN atendido boolean AFTER horasaida;

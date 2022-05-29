@@ -37,6 +37,9 @@
                                         <a href="../../backend/excluirFila.php?idfila=<?php echo $filas[$i]['idfila']?>">
                                             <button type="button" class="button-card" id="delet-button" onclick="excluirFila(<?php echo $filas[$i]['idfila']?>)">Excluir Fila</button>    
                                         </a>
+                                        <a href="../../pages/acompanharFila/index.php?idfila=<?php echo $filas[$i]['idfila'] ?>">
+                                            <button type="button" class="button-card" id="follow-button" onclick="">Acompanhar Fila</button>    
+                                        </a>
                                         
                                     </div>
                                 </div>
