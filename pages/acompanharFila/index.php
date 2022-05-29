@@ -1,6 +1,7 @@
 <?php  
     require('C:/xampp/htdocs/Kifila/backend/conectionBD.php');
     require('C:/xampp/htdocs/Kifila/backend/listUsersFila.php');
+    header("Refresh: 5");
 ?>
 
 <!DOCTYPE html>
