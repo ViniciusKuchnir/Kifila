@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <?php 
-    require('C:/xampp/htdocs/Kifila/components/head.php');
+    require('../../components/head.php');
 ?>    
 <title>Kifila - Sign Up</title>
 <body>
@@ -54,7 +54,7 @@
     </div>
 
 <?php 
-    require('C:/xampp/htdocs/Kifila/components/scripts.php');
+    require('../../components/scripts.php');
 ?>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php  
-    require('C:/xampp/htdocs/Kifila/backend/conectionBD.php');
-    require('C:/xampp/htdocs/Kifila/backend/getDataUser.php');
+    require('../../backend/conectionBD.php');
+    require('../../backend/getDataUser.php');
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@
     <title>Kifila - Usuário</title>
 </head>
 <body>
-    <?php require('C:/xampp/htdocs/Kifila/components/navbar/navbar.php');?>
+    <?php require('../../components/navbar/navbar.php');?>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
