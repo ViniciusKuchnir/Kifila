@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <?php require('../../components/head.php'); ?>
+    <?php require('/Applications/MAMP/htdocs/Kifila/components/head.php'); ?>
     <title>Kifila - Dashboard</title>
 </head>
 <body>
