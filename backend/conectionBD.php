@@ -3,7 +3,7 @@
     $host = "localhost:3306";
     $db   = "kifila";
     $user = "root";
-    $pass = "";
+    $pass = "root";
 
      // Cria a conexão com o banco de dados
      $conn = mysqli_connect($host, $user, $pass, $db);
