@@ -51,8 +51,8 @@ create table ingresso(
     iduser int,
     dataingresso date, 
     horaingresso time, 
-    horasaida time
-    atendido boolean, 
+    horasaida time,
+    atendido boolean 
 );
 
 alter table ingresso add constraint idfila

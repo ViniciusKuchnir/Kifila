@@ -1,6 +1,6 @@
 <?php  
-    require('C:/xampp/htdocs/Kifila/backend/conectionBD.php');
-    require('C:/xampp/htdocs/Kifila/backend/listUsersFila.php');
+    require('../../backend/conectionBD.php');
+    require('../../backend/listUsersFila.php');
     header("Refresh: 5");
 ?>
 
@@ -11,7 +11,7 @@
     <title>Kifila - Acompanhar Filas</title>
 </head>
 <body>
-    <?php require('C:/xampp/htdocs/Kifila/components/navbar/navbar.php') ?>
+    <?php require('../../components/navbar/navbar.php') ?>
 
     <div class="container">
         <div class="row mt-3 button">
