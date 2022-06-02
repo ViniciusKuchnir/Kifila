@@ -1,9 +1,9 @@
 <?php
     // Definições de host, database, usuário e senha
-    $host = "localhost:3306";
+    $host = "localhost:3307";
     $db   = "kifila";
     $user = "root";
-    $pass = "";
+    $pass = "root";
 
      // Cria a conexão com o banco de dados
      $conn = mysqli_connect($host, $user, $pass, $db);
