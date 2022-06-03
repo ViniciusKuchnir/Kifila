@@ -12,4 +12,47 @@
     font-family: 'Nunito', sans-serif;
 }
 
+.card{
+    width: 18rem;
+    border-radius: 10px;
+}
+
+.card-title{
+    text-align: center;
+}
+
+.position{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    font-size: 1.6rem;
+}
+
+.position-number{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn{
+    height: 44px;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 22px;
+    border: 2px solid #fff;
+    background-color: #4BC9C4;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.btn:hover{
+    background-color: #FFF;
+    border: 2px solid #4BC9C4;
+    color: #4BC9C4;
+}
+
 
