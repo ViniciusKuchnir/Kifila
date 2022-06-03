@@ -26,7 +26,7 @@
             print_r('<p class="card-text">Descrição:</p>');
             print_r('<div class="row">');
             print_r('<div class="col-md-12 buttons-card">');
-            print_r('<a href="#">');
+            print_r('<a href="../../backend/ingressarFila.php?idfila='.$results[$i]['idfila'].'">');
             print_r('<button type="button" class="button-card" id="enter-button">Entrar na Fila</button>    ');
             print_r('</a>');
             print_r('</div>');
