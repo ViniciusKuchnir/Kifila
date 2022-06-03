@@ -29,6 +29,13 @@
                                 </a>
                             </li>
                         <?php }?>
+                        <?php if(verificaTipoUsuario() == 1) { ?>
+                            <li class="menu-item">
+                                <a href="../../pages/ingressarFila">
+                                    Ingressar
+                                </a>
+                            </li>
+                        <?php }?>
                         <li class="menu-item">
                             <a href="../../pages/user">
                                 Perfil
