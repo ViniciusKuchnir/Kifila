@@ -12,5 +12,22 @@
     <!--Font Awesome -->
     <script src="https://kit.fontawesome.com/95b08d3090.js" crossorigin="anonymous"></script>
 
+    <!--Estilos gerais-->
+    <style>
+        #btn-help{
+            position:fixed;
+            width:60px;
+            height:60px;
+            bottom:40px;
+            right:40px;
+            background-color: #4BC9C4;
+            color:#FFF;
+            border-radius:50px;
+            text-align:center;
+            font-size:30px;
+            box-shadow: 1px 1px 2px #888;
+            z-index:1000;
+        }
+    </style>
 
 </head>

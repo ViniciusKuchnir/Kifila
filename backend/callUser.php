@@ -6,7 +6,7 @@
     $query = mysqli_query($conn, 
     "UPDATE ingresso i
     SET i.atendido = 1
-    WHERE i.idfila = 21
+    WHERE i.idfila = $idfila
     AND i.atendido = 0
     LIMIT 1;"
     );
