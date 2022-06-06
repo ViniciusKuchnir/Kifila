@@ -12,6 +12,13 @@
     font-family: 'Nunito', sans-serif;
 }
 
+body{
+    background: url('../../../img/LogoKifila.png');
+    background-repeat: no-repeat;
+    background-position: center 80%;
+    background-attachment: fixed;
+}
+
 .card{
     width: 18rem;
     border-radius: 10px;
@@ -38,21 +45,28 @@
     justify-content: flex-end;
 }
 
-.btn{
+#btn-exit{
     height: 44px;
     padding: 10px;
     text-transform: uppercase;
     border-radius: 22px;
     border: 2px solid #fff;
-    background-color: #4BC9C4;
+    color: #FFF;
+    background-color: #BB2D3B;
     font-weight: bold;
     transition: 0.5s;
 }
 
-.btn:hover{
+#btn-exit:hover{
     background-color: #FFF;
-    border: 2px solid #4BC9C4;
-    color: #4BC9C4;
+    border: 2px solid #BB2D3B;
+    color: #BB2D3B;
+}
+
+#btn-yes-exit{
+    background-color: #4BC9C4;
+    font-weight: bold;
+    color: #FFF
 }
 
 
