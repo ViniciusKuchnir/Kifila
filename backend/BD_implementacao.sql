@@ -30,7 +30,7 @@ create table setor(
 
 create table fila(
     idfila int primary key auto_increment, 
-    nome varchar(20),
+    nome varchar(50),
     descricao varchar(256),
     numerointegrantes int, 
     toleranciamedia time, 
