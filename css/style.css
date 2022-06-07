@@ -81,6 +81,10 @@
     color: #4BC9C4;
 }
 
+#btn-help{
+    display: none;
+}
+
 /*Form*/
 
 .form{
