@@ -27,6 +27,9 @@
                 senha = '$hash_password'
                 WHERE email = '$email' ");
 
+                
+                echo "<script>window.location.href='../pages/user/index.php'</script>";
+
             }
             if($total_company == 1){
                 $hash_password = createHashPassword($password);
@@ -36,6 +39,8 @@
                 SET nome = '$nameUser', 
                 senha = '$hash_password'
                 WHERE email = '$email' ");
+
+                echo "<script>window.location.href='../pages/user/index.php'</script>";
             }    
         }else{
             echo"<script language='javascript' type='text/javascript'>
