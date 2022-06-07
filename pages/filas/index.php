@@ -20,6 +20,13 @@
             </div>
         </div>
         <div class="row">
+            <div class="col-md-12 button-create mb-3">
+                <a href="../criarFila/index.php">
+                    <button type="button" id="btn"><i class="fa fa-plus" aria-hidden="true"></i> Criar Fila</button>
+                </a>
+            </div>
+        </div>
+        <div class="row">
             
                 <?php 
                     $filas = getFilas();
@@ -48,15 +55,7 @@
                     </div>  
                 <?php  
                     }
-                ?>
-                
-        </div>
-        <div class="row">
-            <div class="col-md-12 button-create">
-                <a href="../criarFila/index.php">
-                    <button type="button" id="btn"><i class="fa fa-plus" aria-hidden="true"></i></button>
-                </a>
-            </div>
+                ?>    
         </div>
     </div>
     
