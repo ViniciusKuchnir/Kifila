@@ -49,6 +49,11 @@
                                 Perfil
                             </a>
                         </li>
+                        <li class="menu-item">
+                            <a href="../../backend/signup.php">
+                                Sair
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>        
