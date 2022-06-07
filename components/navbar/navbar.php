@@ -12,7 +12,15 @@
             <div class="row">
                 <div class="col-md-2">
                     <div class="logo">
-                        <h2 id="logo">Kifila</h2>
+                        <?php if(verificaTipoUsuario() == 2) {?>
+                            <a id="link-logo" href="../../pages/dashboard_pj">
+                                <h2 id="logo">Kifila</h2>
+                            </a>
+                        <?php } else {?>
+                            <a id="link-logo" href="../../pages/dashboard_pf">
+                                <h2 id="logo">Kifila</h2>
+                            </a>
+                        <?php } ?>
                     </div>
                 </div>
                 <div class="col-md-10">

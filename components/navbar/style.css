@@ -21,6 +21,11 @@
     padding-right: .7rem;
 }
 
+#link-logo{
+    text-decoration: none;
+    cursor: pointer;
+}
+
 #logo{
     font-family: 'Oleo Script Swash Caps', cursive;
     font-size: 3rem;
