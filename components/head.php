@@ -1,4 +1,5 @@
 <head>
+    
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,6 +13,9 @@
     <!--Font Awesome -->
     <script src="https://kit.fontawesome.com/95b08d3090.js" crossorigin="anonymous"></script>
 
+    <!--Favicon-->
+    <link rel = "shortcut icon" type = "imagem/x-icon" href = "../../img/favicon.png"/>
+    
     <!--Estilos gerais-->
     <style>
         #btn-help{
