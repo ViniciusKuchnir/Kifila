@@ -34,20 +34,6 @@
             border: none;
             align-items: center;
         }
-
-        .modal-dialog {
-            width: 100vw;
-            height: 100vh;
-            margin: 0;
-            padding: 0; 
-        }
-
-        .modal-content {
-            height: 100vh;
-            width: 100vw;
-            min-height: 100%;
-            border-radius: 0;
-        }
     </style>
 
 </head>
