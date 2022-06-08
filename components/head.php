@@ -31,6 +31,22 @@
             font-size:30px;
             box-shadow: 1px 1px 2px #888;
             z-index:1000;
+            border: none;
+            align-items: center;
+        }
+
+        .modal-dialog {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0; 
+        }
+
+        .modal-content {
+            height: 100vh;
+            width: 100vw;
+            min-height: 100%;
+            border-radius: 0;
         }
     </style>
 
