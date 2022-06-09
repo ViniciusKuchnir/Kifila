@@ -40,7 +40,7 @@
                 print_r('<h6 class="card-subtitle mb-2 text-muted">Você está na posição:</h6>');
                 print_r('<div class="position">');
                 print_r('<i class="fa-solid fa-person-arrow-down-to-line"></i>');
-                print_r('<p class="position-number">8</p>');
+                print_r('<p class="position-number">'.positionQueue($results[$i]['idfila'])['count(*)'].'</p>');
                 print_r('</div>');
                 print_r('<div class="buttons">');
                 print_r('<button id="btn-exit" data-bs-toggle="modal" data-bs-target="#exitQueue-'.$results[$i]['idfila'].'">Sair da Fila</button>');
@@ -83,7 +83,25 @@
         mysqli_close($conn);
     }
 
-    function positionQueue(){
+    function positionQueue($idfila){
+        require ('conectionBD.php');
 
+        $email = $_COOKIE['email'];
+
+        $ingressoUser = mysqli_fetch_assoc(mysqli_query($conn,
+        "SELECT i.codIngresso 
+        FROM ingresso AS i 
+        JOIN usuario AS u
+        ON i.iduser= u.codUser
+        WHERE i.idfila='$idfila' AND u.email = '$email'"))['codIngresso'];
+
+        
+        $position = mysqli_fetch_assoc(mysqli_query($conn,
+        "SELECT count(*) FROM ingresso AS i
+        WHERE i.idfila='$idfila' AND i.atendido=0 AND i.codIngresso< '$ingressoUser'"));
+        
+        return $position;
+        
+        mysqli_close($conn);
     }
 ?>

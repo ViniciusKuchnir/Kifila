@@ -16,6 +16,7 @@
     $existeUsuarioFila = mysqli_num_rows(mysqli_query($conn,
     "SELECT * FROM ingresso
     WHERE ingresso.iduser = '$iduser'
+    AND ingresso.idfila = '$idfila'
     AND ingresso.atendido = 0"
     ));
 
