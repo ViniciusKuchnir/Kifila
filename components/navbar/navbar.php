@@ -39,6 +39,13 @@
                         <?php }?>
                         <?php if(verificaTipoUsuario() == 1) { ?>
                             <li class="menu-item">
+                                <a href="../../pages/dashboard_pf">
+                                    Dashboard
+                                </a>
+                            </li>
+                        <?php }?>
+                        <?php if(verificaTipoUsuario() == 1) { ?>
+                            <li class="menu-item">
                                 <a href="../../pages/ingressarFila">
                                     Ingressar
                                 </a>
@@ -60,26 +67,3 @@
         </div>
     </div>
 </div>
-
-
-
-
-<!-- <ul class="menu">
-<?php if(verificaTipoUsuario() == 2) { ?>
-                                    <li class="menu-item">
-                                        <a href="../../pages/dashboard_pj">
-                                            Dashboard
-                                        </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="../../pages/filas">
-                                            Filas
-                                        </a>
-                                    </li>
-                                <?php }?>
-                                <li class="menu-item">
-                                    <a href="../../pages/user">
-                                        Perfil
-                                    </a>
-                                </li>       
-                            </ul> -->
