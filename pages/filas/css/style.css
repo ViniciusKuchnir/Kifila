@@ -58,6 +58,10 @@
     color: #4BC9C4;
 }
 
+#edit-button{
+    background-color: #FEDC00;
+}
+
 .button-create{
     display: flex;
     justify-content: center;

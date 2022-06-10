@@ -41,11 +41,14 @@
                                 <p class="card-text">Descrição: <?php echo $filas[$i]['descricao'] ?></p>
                                 <div class="row">
                                     <div class="col-md-12 buttons-card">
-                                        <a href="../../backend/excluirFila.php?idfila=<?php echo $filas[$i]['idfila']?>">
-                                            <button type="button" class="button-card" id="delet-button" onclick="excluirFila(<?php echo $filas[$i]['idfila']?>)">Excluir Fila</button>    
-                                        </a>
                                         <a href="../../pages/acompanharFila/index.php?idfila=<?php echo $filas[$i]['idfila'] ?>">
                                             <button type="button" class="button-card" id="follow-button" onclick="">Acompanhar Fila</button>    
+                                        </a>
+                                        <a href="../../pages/editarFila/index.php?idfila=<?php echo $filas[$i]['idfila'] ?>">
+                                            <button type="button" class="button-card" id="edit-button" onclick="">Editar Fila</button>    
+                                        </a>
+                                        <a href="../../backend/excluirFila.php?idfila=<?php echo $filas[$i]['idfila']?>">
+                                            <button type="button" class="button-card" id="delet-button" onclick="excluirFila(<?php echo $filas[$i]['idfila']?>)">Excluir Fila</button>    
                                         </a>
                                         
                                     </div>
