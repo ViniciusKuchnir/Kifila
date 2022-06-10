@@ -36,7 +36,9 @@ create table fila(
     toleranciamedia time, 
     tempomedioespero time,
     datafila date,
-    criador int
+    criador int,
+    ativada boolean default true not null 
+
 );
 
 alter table fila add constraint criador
