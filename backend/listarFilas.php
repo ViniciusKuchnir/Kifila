@@ -5,8 +5,20 @@
 
     $query = mysqli_query($conn, 
     "SELECT * FROM fila
-    WHERE fila.idfila IN ('$fila')
-    OR fila.nome LIKE '%".$fila."%'");
+    WHERE fila.ativada = 1 AND 
+    ((fila.idfila IN ('$fila')) OR 
+    (fila.nome LIKE '%".$fila."%'))");
+
+
+    /*
+    SELECT * FROM fila
+    WHERE fila.idfila
+    fila.ativada = 1 
+    IN ('$fila')
+    OR 
+    fila.nome LIKE '%".$fila."%'
+    
+    */
         
 
     $results = array();
