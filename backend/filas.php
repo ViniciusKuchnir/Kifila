@@ -20,4 +20,17 @@
         mysqli_close($conn);
     }
 
+    function getEstadoFila($idfila){
+        require ('conectionBD.php');
+
+        $stateQueue = mysqli_fetch_assoc(mysqli_query($conn,
+        "SELECT f.ativada FROM fila AS f
+        WHERE idfila = '$idfila'"))['ativada'];
+
+        return $stateQueue;
+
+
+        mysqli_close($conn);
+    }
+
 ?>

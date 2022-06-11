@@ -8,6 +8,36 @@
     height: 100%;
 }
 
+#state-queue{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#circle-activated{
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.2rem;
+    background-color: #228C22;
+    border-radius: 50%;
+}
+
+#circle-disabled{
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.2rem;
+    background-color: #F32013;
+    border-radius: 50%;
+}
+
+#queue-activated{
+    color: #228C22;
+}
+
+#queue-disabled{
+    color: #F32013
+}
+
 .buttons-card{
     display: flex;
     justify-content: flex-end;
@@ -58,8 +88,24 @@
     color: #4BC9C4;
 }
 
+
+#follow-button-disabled{
+    background-color: #4BC9C4;
+    opacity: 0.5;
+}
+
 #edit-button{
     background-color: #FEDC00;
+}
+
+#disable-button{
+    background-color:#FF8C00;
+}
+
+#disable-button:hover{
+    background-color:#FFF;
+    border: 2px solid #FF8C00;
+    color: #FF8C00;
 }
 
 .button-create{
