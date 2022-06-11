@@ -11,6 +11,15 @@ create table usuario(
     senha varchar(70)
 );
 
+create table setor(
+	idsetor int primary key auto_increment,
+    nomesetor varchar(55)
+); 
+
+INSERT INTO setor(nomesetor) VALUES ('Indústria');
+INSERT INTO setor(nomesetor) VALUES ('Serviços');
+INSERT INTO setor(nomesetor) VALUES ('Outros');
+
 create table empresa(
 	codEmpresa integer primary key auto_increment, 
     nome varchar(30), 
@@ -22,11 +31,6 @@ create table empresa(
 
 alter table empresa add constraint idsetor 
 foreign key (idsetor) references setor(idsetor);
-
-create table setor(
-	idsetor int primary key auto_increment,
-    nomesetor varchar(55)
-);  
 
 create table fila(
     idfila int primary key auto_increment, 
